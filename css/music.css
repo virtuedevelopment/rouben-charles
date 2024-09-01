@@ -1,0 +1,143 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-main{
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.backvid{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.content-music{
+    margin: auto;
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.polaroid1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f6f6f6;
+    width: 500px;
+    height: 100%;
+
+    opacity: 0.8;
+}
+.polaroid1 img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+.polaroid1 video{
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+}
+.vidroid{
+    height: 100%;
+}
+.sidebar{
+    text-align: center;
+    font-size: 12px;
+   }
+
+.music-text{
+    text-align: center;
+    width: 50%;
+}
+
+.music-info{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.subtitle{
+    color: #CCA426;
+}
+.sub{
+    color: #CCA426;
+}
+.on-page{
+    color: #CCA426;
+}
+.music-sub{
+    width: 90%;
+    text-align: left;
+    padding-left:5%;
+    transform: translateY(200%);
+}
+
+.streaming-links-music{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+@media (max-width:1000px) {
+    .music-main{
+        height: 250vh;
+    }
+   .content-music{
+    flex-direction: column;
+    height: 90vh;
+    margin: auto;
+  }
+   .polaroid1{
+    width: 325px;
+    height: 400px;
+    margin-bottom: 5%;
+   }
+   .vidroid{
+    height: 90%;
+    }
+   
+   .subtitle{
+    font-size: 12px;
+    width: 150%;
+    text-align: center;
+   }
+
+   .streaming-links{
+    right: 3%;
+   }
+
+   .polaroid1 h2{
+        font-size: 35px;
+   }
+
+   .music-sub{
+        width: 80%;
+        text-align: center;
+   }
+   .sidebar{
+    text-align: center;
+   }
+
+   .sb-main{
+    width: 100%;
+    font-size: 20px;
+   }
+}

@@ -1,0 +1,283 @@
+@font-face{
+    font-family: rc-polaroid;
+    src: url(/assets/Creattion\ Demo.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background-color: #333333;
+}
+/*  main assets */
+.title{
+    margin: 10px;
+    padding: 10px;
+   letter-spacing: 25px; 
+   font-size: 5vw;
+   filter: blur(2px);
+   font-weight: 500;
+   background-color: transparent;
+}
+
+.list-item{
+    position: relative;
+    margin: 10px;
+    padding:0 10px;
+    letter-spacing: 10px;
+    font-weight: 200;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.list-item:after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 1.5px;
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+}
+
+.list-item:hover:after{
+    width: 100%;
+}
+
+.description-text{
+    margin: 10px;
+    padding: 10px;
+    filter: blur(.25px);
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 16px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.subtitle{
+    margin: 10px;
+    padding: 10px;
+    font-weight: 200;
+    filter: blur(.25px);
+    letter-spacing: 3px;
+    font-size: 1em;
+    background-color: transparent;
+    text-align: center;
+}
+.signature{
+    font-family: rc-polaroid;
+    font-size: 3.5vw;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+/*polaroids*/
+.polaroid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 22%;
+    height: 40vh;
+    background-color: #f6f6f6;
+}
+.polaroid img{
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    transition: all linear 0.7s;
+}
+.polaroid-text{
+    font-family: rc-polaroid;
+    font-size: 2vw;
+    background-color: transparent;
+    color: #333333;
+}
+
+/*menu*/
+.menu{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+    height: 10vh;
+    width: 100%;
+}
+.menu-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    background-color: transparent;
+}
+.music-menu{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+
+    position: fixed;
+    z-index: 19;
+    left: 0;
+    bottom: 6%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.music-menu.active{
+    opacity: 0.8;
+}
+.mega-menu.active > .music-btn + .music-menu{
+    opacity: 0.9;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.music-items{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 5px;
+    background-color: transparent;
+}
+.logo{
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+}
+.logo-img{
+    background-color: transparent;
+}
+.mobile-menu{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.mobile-item{
+    margin-bottom: 50px;
+}
+.mobile-menu.is-active{
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.toggle-button{
+    position: absolute;
+    right: 2em;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+    z-index: 40;
+
+    display: none;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 80%;
+    background-color: #f6f6f6;
+    margin-bottom: 8px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.toggle-button .bar-bottom{
+    height: 3px;
+    width: 80%;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.toggler{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 500;
+    opacity: 1;
+
+}
+.body .toggler:checked ~ .mobile-menu {
+    opacity: 0;
+  }
+
+.mega-menu{
+    background-color: transparent;
+}
+
+.streaming-links{
+    width: 6vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background-color: transparent;
+}
+.stream-item{
+    font-size: 22px;
+    margin:15% auto;
+    z-index: 5;
+    background-color: transparent;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@media (max-width: 1000px){
+    .toggle-button{
+        display: flex;
+    }
+    .menu-links{
+        display: none;
+    }
+}

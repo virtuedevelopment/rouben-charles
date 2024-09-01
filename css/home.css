@@ -1,0 +1,41 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-home{
+    width: 100%;
+    height: 100vh;
+}
+
+.main-home video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rc-name{
+    text-align: center;
+    width: 80%;
+    position: absolute;
+}
+.on-page{
+    color: #CCA426;
+}
+
+@media (max-width:1000px) {
+    
+    .streaming-links{
+        right: 3%;
+    }
+    
+    .rc-name{
+        text-align: center;
+        font-size: 35px;
+    }
+    .stream-item{
+        margin-bottom: 25px;
+    }
+}
