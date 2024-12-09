@@ -1,121 +1,140 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.main-about{
-    width: 100%;
-    height: 175vh;
+.main-about {
+  width: 100%;
+  height: 175vh;
 }
 
-.backvid{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3;
+.backvid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
 }
-.content-main{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 175vh;
-}
-
-.content{
-    margin: 5% auto;
-    width: 90%;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-.polaroid1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #f6f6f6;
-    width: 30%;
-    height: 85%;
-    rotate: -15deg;
-
-    opacity: 0.8;
-}
-.polaroid1 img{
-    width: 90%;
-    height: 70%;
-    object-fit: cover;
-}
-.polaroid2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #f6f6f6;
-    position: relative;
-    width: 30%;
-    height: 85%;
-    rotate: 15deg;
-
-    opacity: 0.8;
-}
-.polaroid2 img{
-    width: 90%;
-    height: 70%;
-    object-fit: cover;
+.content-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 175vh;
 }
 
-.about-text{
-    text-align: center;
-    width: 50%;
+.content {
+  margin: 5% auto;
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.on-page{
-    color: #CCA426;
+.polaroid1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6f6;
+  width: 30%;
+  height: 85%;
+  rotate: -15deg;
+
+  opacity: 0.8;
 }
+.polaroid1 img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+.polaroid2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6f6;
+  position: relative;
+  width: 30%;
+  height: 85%;
+  rotate: 15deg;
+
+  opacity: 0.8;
+}
+.polaroid2 img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: center;
+  width: 50%;
+}
+.on-page {
+  color: #cca426;
+}
+
+.content3 {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 70svh;
+}
+.content3 h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+}
+
+.work-history-item {
+  text-align: center;
+}
+
 @media (max-width: 1000px) {
+  .main-about {
+    height: 300vh;
+  }
 
-    .main-about{
-        height: 300vh;
-    }
+  .content-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    .content-main{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+  .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 125vh;
+  }
+  .content2 {
+    height: 140vh;
+    justify-content: space-evenly;
+  }
+  .about-text {
+    width: 95%;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .polaroid1 {
+    width: 325px;
+    height: 355px;
+  }
+  .polaroid2 {
+    width: 325px;
+    height: 355px;
+  }
+  .polaroid-text {
+    font-size: 35px;
+  }
 
-    .content{
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 125vh;
-    }
-    .content2{
-        height: 140vh;
-        justify-content: space-evenly;
-    }
-    .about-text{
-        width: 95%;
-        font-size: 12px;
-        font-weight: 300;
-    }
-    .polaroid1{
-        width: 325px;
-        height: 355px;
-    }
-    .polaroid2{
-        width: 325px;
-        height: 355px;
-    }
-    .polaroid-text{
-        font-size: 35px;
-    }
-
-    .about-text .signature{
-        font-size: 60px;
-        margin-bottom: 1rem;
-    }
+  .about-text .signature {
+    font-size: 60px;
+    margin-bottom: 1rem;
+  }
 }
